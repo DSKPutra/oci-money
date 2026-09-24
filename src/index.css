@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-light-bg text-slate-900 font-sans antialiased transition-colors duration-200;
+  }
+  html.dark body {
+    @apply bg-bg text-slate-100;
+  }
+  ::selection {
+    @apply bg-neon/30;
+  }
+}
+
+@layer utilities {
+  .font-mono-num {
+    font-variant-numeric: tabular-nums;
+  }
+  .focus-ring {
+    @apply outline-none ring-2 ring-neon/60 ring-offset-2 ring-offset-bg;
+  }
+}

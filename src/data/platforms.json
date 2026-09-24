@@ -1,0 +1,605 @@
+[
+  {
+    "id": "chainalysis",
+    "name": "Chainalysis",
+    "category": "Forensics & Compliance",
+    "url": "https://www.chainalysis.com",
+    "pricing": "Enterprise",
+    "description": "The industry-leading blockchain forensics platform used by governments and exchanges for investigations, AML compliance, and risk scoring.",
+    "descriptionId": "Platform forensik blockchain terkemuka yang dipakai pemerintah dan exchange untuk investigasi, kepatuhan AML, dan penilaian risiko."
+  },
+  {
+    "id": "trm-labs",
+    "name": "TRM Labs",
+    "category": "Forensics & Compliance",
+    "url": "https://www.trmlabs.com",
+    "pricing": "Enterprise",
+    "description": "Blockchain intelligence platform that helps investigators and compliance teams detect fraud, sanctions exposure, and illicit crypto activity.",
+    "descriptionId": "Platform intelijen blockchain yang membantu investigator dan tim kepatuhan mendeteksi fraud, eksposur sanksi, dan aktivitas kripto ilegal."
+  },
+  {
+    "id": "elliptic",
+    "name": "Elliptic",
+    "category": "Forensics & Compliance",
+    "url": "https://www.elliptic.co",
+    "pricing": "Enterprise",
+    "description": "Crypto compliance and blockchain analytics provider offering transaction monitoring, wallet screening, and investigation tools.",
+    "descriptionId": "Penyedia kepatuhan kripto dan analitik blockchain dengan pemantauan transaksi, screening wallet, dan alat investigasi."
+  },
+  {
+    "id": "crystal-intelligence",
+    "name": "Crystal Intelligence",
+    "category": "Forensics & Compliance",
+    "url": "https://crystalintelligence.com",
+    "pricing": "Enterprise",
+    "description": "Blockchain analytics tool for AML investigations, transaction tracing, and crypto risk assessment used by VASPs and law enforcement.",
+    "descriptionId": "Alat analitik blockchain untuk investigasi AML, pelacakan transaksi, dan penilaian risiko kripto yang dipakai VASP dan penegak hukum."
+  },
+  {
+    "id": "merkle-science",
+    "name": "Merkle Science",
+    "category": "Forensics & Compliance",
+    "url": "https://www.merklescience.com",
+    "pricing": "Enterprise",
+    "description": "Predictive blockchain analytics for crime detection, compliance, and risk monitoring across crypto transactions.",
+    "descriptionId": "Analitik blockchain prediktif untuk deteksi kejahatan, kepatuhan, dan pemantauan risiko pada transaksi kripto."
+  },
+  {
+    "id": "scorechain",
+    "name": "Scorechain",
+    "category": "Forensics & Compliance",
+    "url": "https://www.scorechain.com",
+    "pricing": "Enterprise",
+    "description": "Blockchain analytics suite for AML compliance, entity investigation, and risk scoring across multiple chains.",
+    "descriptionId": "Rangkaian analitik blockchain untuk kepatuhan AML, investigasi entitas, dan penilaian risiko lintas jaringan."
+  },
+  {
+    "id": "inca-digital",
+    "name": "Inca Digital",
+    "category": "Forensics & Compliance",
+    "url": "https://inca.digital",
+    "pricing": "Enterprise",
+    "description": "Digital asset market surveillance and intelligence platform for regulators and institutions tracking crypto market activity.",
+    "descriptionId": "Platform pengawasan pasar aset digital dan intelijen untuk regulator serta institusi yang memantau aktivitas pasar kripto."
+  },
+  {
+    "id": "global-ledger",
+    "name": "Global Ledger",
+    "category": "Forensics & Compliance",
+    "url": "https://globalledger.io",
+    "pricing": "Paid",
+    "description": "Blockchain forensics and compliance platform providing transaction tracing and risk analysis for investigators and businesses.",
+    "descriptionId": "Platform forensik blockchain dan kepatuhan yang menyediakan pelacakan transaksi dan analisis risiko untuk investigator dan bisnis."
+  },
+  {
+    "id": "amlbot",
+    "name": "AMLBot",
+    "category": "Forensics & Compliance",
+    "url": "https://amlbot.com",
+    "pricing": "Paid",
+    "description": "Crypto AML and KYT compliance tool offering wallet and transaction risk checks for exchanges and businesses.",
+    "descriptionId": "Alat kepatuhan AML dan KYT kripto yang menyediakan pengecekan risiko wallet dan transaksi untuk exchange dan bisnis."
+  },
+  {
+    "id": "coinfirm",
+    "name": "Coinfirm",
+    "category": "Forensics & Compliance",
+    "url": "https://www.coinfirm.com",
+    "pricing": "Enterprise",
+    "description": "Blockchain analytics and AML platform delivering risk scoring, transaction monitoring, and regulatory reporting.",
+    "descriptionId": "Platform analitik blockchain dan AML yang memberikan penilaian risiko, pemantauan transaksi, dan pelaporan regulasi."
+  },
+  {
+    "id": "misttrack",
+    "name": "MistTrack (SlowMist)",
+    "category": "Forensics & Compliance",
+    "url": "https://misttrack.io",
+    "pricing": "Freemium",
+    "description": "SlowMist's threat intelligence and tracing tool for investigating stolen funds and suspicious wallet addresses.",
+    "descriptionId": "Alat intelijen ancaman dan pelacakan dari SlowMist untuk menyelidiki dana curian dan alamat wallet mencurigakan."
+  },
+  {
+    "id": "metasleuth",
+    "name": "MetaSleuth (BlockSec)",
+    "category": "Forensics & Compliance",
+    "url": "https://metasleuth.io",
+    "pricing": "Freemium",
+    "description": "BlockSec's investigation tool for visualizing fund flows, tracing hacks, and mapping wallet relationships on-chain.",
+    "descriptionId": "Alat investigasi dari BlockSec untuk memvisualisasikan aliran dana, melacak peretasan, dan memetakan relasi wallet on-chain."
+  },
+  {
+    "id": "breadcrumbs",
+    "name": "Breadcrumbs",
+    "category": "Forensics & Compliance",
+    "url": "https://www.breadcrumbs.app",
+    "pricing": "Freemium",
+    "description": "Visual blockchain investigation platform for tracing crypto transactions and mapping suspicious wallet networks.",
+    "descriptionId": "Platform investigasi blockchain visual untuk melacak transaksi kripto dan memetakan jaringan wallet mencurigakan."
+  },
+  {
+    "id": "chainabuse",
+    "name": "Chainabuse",
+    "category": "Forensics & Compliance",
+    "url": "https://www.chainabuse.com",
+    "pricing": "Free",
+    "description": "Community-driven platform for reporting and looking up crypto scams, fraud, and malicious wallet addresses.",
+    "descriptionId": "Platform berbasis komunitas untuk melaporkan dan mencari penipuan kripto, fraud, dan alamat wallet berbahaya."
+  },
+  {
+    "id": "nansen",
+    "name": "Nansen",
+    "category": "Wallet Intelligence & Smart Money",
+    "url": "https://www.nansen.ai",
+    "pricing": "Freemium",
+    "description": "Wallet labeling and smart money analytics platform that tracks profitable traders, funds, and institutional flows on-chain.",
+    "descriptionId": "Platform pelabelan wallet dan analitik smart money yang melacak trader profitabel, dana, dan arus institusi on-chain."
+  },
+  {
+    "id": "arkham",
+    "name": "Arkham Intelligence",
+    "category": "Wallet Intelligence & Smart Money",
+    "url": "https://intel.arkm.com",
+    "pricing": "Freemium",
+    "description": "On-chain intelligence platform that deanonymizes wallets and entities, tracking their activity and portfolio in real time.",
+    "descriptionId": "Platform intelijen on-chain yang mengungkap identitas wallet dan entitas, melacak aktivitas serta portofolionya secara real time."
+  },
+  {
+    "id": "bubblemaps",
+    "name": "Bubblemaps",
+    "category": "Wallet Intelligence & Smart Money",
+    "url": "https://bubblemaps.io",
+    "pricing": "Freemium",
+    "description": "Visual token holder mapping tool that reveals wallet clusters, insider connections, and supply concentration.",
+    "descriptionId": "Alat pemetaan pemegang token secara visual yang mengungkap klaster wallet, koneksi insider, dan konsentrasi supply."
+  },
+  {
+    "id": "cielo",
+    "name": "Cielo",
+    "category": "Wallet Intelligence & Smart Money",
+    "url": "https://cielo.finance",
+    "pricing": "Freemium",
+    "description": "Real-time wallet tracking platform for following smart money trades and receiving alerts across multiple chains.",
+    "descriptionId": "Platform pelacakan wallet real-time untuk mengikuti transaksi smart money dan menerima alert di berbagai jaringan."
+  },
+  {
+    "id": "spot-on-chain",
+    "name": "Spot On Chain",
+    "category": "Wallet Intelligence & Smart Money",
+    "url": "https://spotonchain.ai",
+    "pricing": "Freemium",
+    "description": "On-chain analytics platform surfacing smart money movements and whale activity with AI-assisted insights.",
+    "descriptionId": "Platform analitik on-chain yang menampilkan pergerakan smart money dan aktivitas whale dengan bantuan wawasan AI."
+  },
+  {
+    "id": "debank",
+    "name": "DeBank",
+    "category": "Wallet Intelligence & Smart Money",
+    "url": "https://debank.com",
+    "pricing": "Free",
+    "description": "DeFi portfolio tracker that aggregates wallet balances, positions, and protocol interactions across chains.",
+    "descriptionId": "Pelacak portofolio DeFi yang mengagregasi saldo wallet, posisi, dan interaksi protokol di berbagai jaringan."
+  },
+  {
+    "id": "zapper",
+    "name": "Zapper",
+    "category": "Wallet Intelligence & Smart Money",
+    "url": "https://zapper.xyz",
+    "pricing": "Free",
+    "description": "Web3 portfolio dashboard for tracking, managing, and interacting with DeFi and NFT positions across chains.",
+    "descriptionId": "Dasbor portofolio web3 untuk melacak, mengelola, dan berinteraksi dengan posisi DeFi serta NFT di berbagai jaringan."
+  },
+  {
+    "id": "zerion",
+    "name": "Zerion",
+    "category": "Wallet Intelligence & Smart Money",
+    "url": "https://zerion.io",
+    "pricing": "Free",
+    "description": "Multi-chain wallet and portfolio tracker offering a unified view of DeFi assets, NFTs, and transaction history.",
+    "descriptionId": "Pelacak wallet dan portofolio multi-chain yang memberi tampilan terpadu aset DeFi, NFT, dan riwayat transaksi."
+  },
+  {
+    "id": "whale-alert",
+    "name": "Whale Alert",
+    "category": "Wallet Intelligence & Smart Money",
+    "url": "https://whale-alert.io",
+    "pricing": "Freemium",
+    "description": "Real-time large transaction tracker that alerts on significant crypto transfers between wallets and exchanges.",
+    "descriptionId": "Pelacak transaksi besar secara real time yang memberi alert atas transfer kripto signifikan antar wallet dan exchange."
+  },
+  {
+    "id": "lookonchain",
+    "name": "Lookonchain",
+    "category": "Wallet Intelligence & Smart Money",
+    "url": "https://www.lookonchain.com",
+    "pricing": "Free",
+    "description": "On-chain data curation platform reporting notable whale and smart money moves across the crypto market.",
+    "descriptionId": "Platform kurasi data on-chain yang melaporkan pergerakan whale dan smart money penting di pasar kripto."
+  },
+  {
+    "id": "glassnode",
+    "name": "Glassnode",
+    "category": "On-chain Market Analytics",
+    "url": "https://glassnode.com",
+    "pricing": "Freemium",
+    "description": "On-chain market intelligence platform providing deep Bitcoin and Ethereum metrics for research and trading decisions.",
+    "descriptionId": "Platform intelijen pasar on-chain yang menyediakan metrik mendalam Bitcoin dan Ethereum untuk riset dan keputusan trading."
+  },
+  {
+    "id": "cryptoquant",
+    "name": "CryptoQuant",
+    "category": "On-chain Market Analytics",
+    "url": "https://cryptoquant.com",
+    "pricing": "Freemium",
+    "description": "On-chain and exchange flow analytics platform used to gauge market sentiment and predict price trends.",
+    "descriptionId": "Platform analitik arus on-chain dan exchange yang dipakai untuk mengukur sentimen pasar dan memprediksi tren harga."
+  },
+  {
+    "id": "santiment",
+    "name": "Santiment",
+    "category": "On-chain Market Analytics",
+    "url": "https://santiment.net",
+    "pricing": "Freemium",
+    "description": "Crypto market intelligence platform combining on-chain, social, and development data for trading insights.",
+    "descriptionId": "Platform intelijen pasar kripto yang menggabungkan data on-chain, sosial, dan pengembangan untuk wawasan trading."
+  },
+  {
+    "id": "sentora",
+    "name": "Sentora (formerly IntoTheBlock)",
+    "category": "On-chain Market Analytics",
+    "url": "https://sentora.com",
+    "pricing": "Freemium",
+    "description": "Crypto analytics platform delivering machine-learning-driven market and on-chain indicators for investors.",
+    "descriptionId": "Platform analitik kripto yang menghadirkan indikator pasar dan on-chain berbasis machine learning untuk investor."
+  },
+  {
+    "id": "coin-metrics",
+    "name": "Coin Metrics",
+    "category": "On-chain Market Analytics",
+    "url": "https://coinmetrics.io",
+    "pricing": "Freemium",
+    "description": "Institutional-grade crypto data provider offering on-chain metrics, network data, and market benchmarks.",
+    "descriptionId": "Penyedia data kripto kelas institusi yang menawarkan metrik on-chain, data jaringan, dan benchmark pasar."
+  },
+  {
+    "id": "kaiko",
+    "name": "Kaiko",
+    "category": "On-chain Market Analytics",
+    "url": "https://www.kaiko.com",
+    "pricing": "Enterprise",
+    "description": "Institutional crypto market data provider offering historical and real-time pricing, order book, and derivatives data.",
+    "descriptionId": "Penyedia data pasar kripto institusional dengan data harga historis dan real-time, order book, serta derivatif."
+  },
+  {
+    "id": "amberdata",
+    "name": "Amberdata",
+    "category": "On-chain Market Analytics",
+    "url": "https://www.amberdata.io",
+    "pricing": "Enterprise",
+    "description": "Digital asset data platform covering on-chain, market, and derivatives data for institutional research and risk management.",
+    "descriptionId": "Platform data aset digital yang mencakup data on-chain, pasar, dan derivatif untuk riset institusi serta manajemen risiko."
+  },
+  {
+    "id": "messari",
+    "name": "Messari",
+    "category": "On-chain Market Analytics",
+    "url": "https://messari.io",
+    "pricing": "Freemium",
+    "description": "Crypto research and market intelligence platform offering asset profiles, on-chain data, and industry reports.",
+    "descriptionId": "Platform riset dan intelijen pasar kripto yang menyediakan profil aset, data on-chain, dan laporan industri."
+  },
+  {
+    "id": "dune",
+    "name": "Dune",
+    "category": "Data & Query",
+    "url": "https://dune.com",
+    "pricing": "Freemium",
+    "description": "Community-driven blockchain analytics platform where users query on-chain data with SQL and build shareable dashboards.",
+    "descriptionId": "Platform analitik blockchain berbasis komunitas untuk melakukan query data on-chain dengan SQL dan membuat dashboard yang bisa dibagikan."
+  },
+  {
+    "id": "allium",
+    "name": "Allium",
+    "category": "Data & Query",
+    "url": "https://www.allium.so",
+    "pricing": "Enterprise",
+    "description": "Enterprise blockchain data infrastructure offering unified SQL and API access across dozens of chains.",
+    "descriptionId": "Infrastruktur data blockchain untuk enterprise yang menawarkan akses SQL dan API terpadu di puluhan jaringan."
+  },
+  {
+    "id": "flipside",
+    "name": "Flipside Crypto",
+    "category": "Data & Query",
+    "url": "https://flipsidecrypto.xyz",
+    "pricing": "Freemium",
+    "description": "Blockchain analytics platform combining SQL-based data science with community bounties for on-chain insights.",
+    "descriptionId": "Platform analitik blockchain yang menggabungkan data science berbasis SQL dengan bounty komunitas untuk wawasan on-chain."
+  },
+  {
+    "id": "footprint-analytics",
+    "name": "Footprint Analytics",
+    "category": "Data & Query",
+    "url": "https://www.footprint.network",
+    "pricing": "Freemium",
+    "description": "No-code blockchain data analytics platform for building charts and dashboards from cleaned on-chain datasets.",
+    "descriptionId": "Platform analitik data blockchain tanpa kode untuk membangun chart dan dashboard dari dataset on-chain yang sudah dibersihkan."
+  },
+  {
+    "id": "bitquery",
+    "name": "Bitquery",
+    "category": "Data & Query",
+    "url": "https://bitquery.io",
+    "pricing": "Freemium",
+    "description": "Blockchain data API and GraphQL platform for querying transactions, DEX trades, and token transfers across chains.",
+    "descriptionId": "Platform API data blockchain dan GraphQL untuk melakukan query transaksi, trade DEX, dan transfer token lintas jaringan."
+  },
+  {
+    "id": "covalent-goldrush",
+    "name": "Covalent GoldRush",
+    "category": "Data & Query",
+    "url": "https://goldrush.dev",
+    "pricing": "Freemium",
+    "description": "Unified blockchain data API delivering standardized on-chain data across 100+ chains for developers.",
+    "descriptionId": "API data blockchain terpadu yang menyediakan data on-chain terstandarisasi di lebih dari 100 jaringan untuk developer."
+  },
+  {
+    "id": "the-graph",
+    "name": "The Graph",
+    "category": "Data & Query",
+    "url": "https://thegraph.com",
+    "pricing": "Freemium",
+    "description": "Decentralized indexing protocol that lets developers query blockchain data through open APIs called subgraphs.",
+    "descriptionId": "Protokol pengindeksan terdesentralisasi yang memungkinkan developer melakukan query data blockchain lewat API terbuka bernama subgraph."
+  },
+  {
+    "id": "goldsky",
+    "name": "Goldsky",
+    "category": "Data & Query",
+    "url": "https://goldsky.com",
+    "pricing": "Paid",
+    "description": "Real-time blockchain data indexing and streaming platform for building performant on-chain data pipelines.",
+    "descriptionId": "Platform pengindeksan dan streaming data blockchain real-time untuk membangun pipeline data on-chain yang cepat."
+  },
+  {
+    "id": "space-and-time",
+    "name": "Space and Time",
+    "category": "Data & Query",
+    "url": "https://www.spaceandtime.io",
+    "pricing": "Freemium",
+    "description": "Verifiable data warehouse connecting blockchain and off-chain data with tamperproof SQL queries.",
+    "descriptionId": "Gudang data terverifikasi yang menghubungkan data blockchain dan off-chain dengan query SQL anti-manipulasi."
+  },
+  {
+    "id": "token-terminal",
+    "name": "Token Terminal",
+    "category": "Protocol Fundamentals",
+    "url": "https://tokenterminal.com",
+    "pricing": "Freemium",
+    "description": "Financial data platform for crypto protocols, tracking revenue, fees, and other fundamental metrics like traditional equities.",
+    "descriptionId": "Platform data finansial untuk protokol kripto yang melacak revenue, fee, dan metrik fundamental lain layaknya saham tradisional."
+  },
+  {
+    "id": "defillama",
+    "name": "DefiLlama",
+    "category": "Protocol Fundamentals",
+    "url": "https://defillama.com",
+    "pricing": "Free",
+    "description": "The leading TVL and DeFi analytics aggregator tracking protocols, chains, yields, and fees across the ecosystem.",
+    "descriptionId": "Agregator analitik TVL dan DeFi terkemuka yang melacak protokol, chain, yield, dan fee di seluruh ekosistem."
+  },
+  {
+    "id": "artemis",
+    "name": "Artemis",
+    "category": "Protocol Fundamentals",
+    "url": "https://www.artemis.xyz",
+    "pricing": "Freemium",
+    "description": "Crypto fundamentals data platform comparing protocol and chain metrics like revenue, users, and stablecoin flows.",
+    "descriptionId": "Platform data fundamental kripto yang membandingkan metrik protokol dan chain seperti revenue, pengguna, dan arus stablecoin."
+  },
+  {
+    "id": "growthepie",
+    "name": "growthepie",
+    "category": "Protocol Fundamentals",
+    "url": "https://www.growthepie.com",
+    "pricing": "Free",
+    "description": "Ethereum layer-2 analytics platform comparing scaling solutions by activity, fees, and economic value.",
+    "descriptionId": "Platform analitik layer-2 Ethereum yang membandingkan solusi scaling berdasarkan aktivitas, fee, dan nilai ekonomi."
+  },
+  {
+    "id": "l2beat",
+    "name": "L2BEAT",
+    "category": "Protocol Fundamentals",
+    "url": "https://l2beat.com",
+    "pricing": "Free",
+    "description": "Independent research and risk analysis platform tracking Ethereum layer-2 scaling projects and their security models.",
+    "descriptionId": "Platform riset independen dan analisis risiko yang melacak proyek scaling layer-2 Ethereum beserta model keamanannya."
+  },
+  {
+    "id": "ultrasound-money",
+    "name": "ultrasound.money",
+    "category": "Protocol Fundamentals",
+    "url": "https://ultrasound.money",
+    "pricing": "Free",
+    "description": "Real-time dashboard tracking Ethereum's ETH issuance, burn rate, and supply dynamics since EIP-1559.",
+    "descriptionId": "Dasbor real-time yang melacak penerbitan ETH, tingkat burn, dan dinamika supply Ethereum sejak EIP-1559."
+  },
+  {
+    "id": "dexscreener",
+    "name": "DexScreener",
+    "category": "Token Trading & DEX",
+    "url": "https://dexscreener.com",
+    "pricing": "Free",
+    "description": "Real-time DEX charting and token screener tracking prices, liquidity, and trading pairs across many chains.",
+    "descriptionId": "Charting DEX dan screener token real-time yang melacak harga, likuiditas, dan pasangan trading di banyak jaringan."
+  },
+  {
+    "id": "dextools",
+    "name": "DEXTools",
+    "category": "Token Trading & DEX",
+    "url": "https://www.dextools.io",
+    "pricing": "Freemium",
+    "description": "DEX trading analytics platform providing live charts, pair explorer, and token audit signals.",
+    "descriptionId": "Platform analitik trading DEX yang menyediakan chart langsung, pair explorer, dan sinyal audit token."
+  },
+  {
+    "id": "birdeye",
+    "name": "Birdeye",
+    "category": "Token Trading & DEX",
+    "url": "https://birdeye.so",
+    "pricing": "Freemium",
+    "description": "Multi-chain token analytics and trading terminal offering real-time price data and trader tools, popular on Solana.",
+    "descriptionId": "Analitik token multi-chain dan terminal trading dengan data harga real-time serta alat trader, populer di Solana."
+  },
+  {
+    "id": "gmgn",
+    "name": "GMGN",
+    "category": "Token Trading & DEX",
+    "url": "https://gmgn.ai",
+    "pricing": "Free",
+    "description": "Meme coin and new token tracking platform with smart money wallet tracking and fast trading tools.",
+    "descriptionId": "Platform pelacakan meme coin dan token baru dengan pelacakan wallet smart money serta alat trading cepat."
+  },
+  {
+    "id": "geckoterminal",
+    "name": "GeckoTerminal",
+    "category": "Token Trading & DEX",
+    "url": "https://www.geckoterminal.com",
+    "pricing": "Free",
+    "description": "CoinGecko's real-time DEX and token charting tool covering pools and trading activity across many networks.",
+    "descriptionId": "Alat charting DEX dan token real-time dari CoinGecko yang mencakup pool dan aktivitas trading di banyak jaringan."
+  },
+  {
+    "id": "etherscan",
+    "name": "Etherscan",
+    "category": "Block Explorers",
+    "url": "https://etherscan.io",
+    "pricing": "Free",
+    "description": "The leading Ethereum block explorer for viewing transactions, contracts, wallets, and on-chain activity.",
+    "descriptionId": "Block explorer Ethereum terkemuka untuk melihat transaksi, kontrak, wallet, dan aktivitas on-chain."
+  },
+  {
+    "id": "bscscan",
+    "name": "BscScan",
+    "category": "Block Explorers",
+    "url": "https://bscscan.com",
+    "pricing": "Free",
+    "description": "The primary block explorer for BNB Smart Chain, showing transactions, tokens, and contract activity.",
+    "descriptionId": "Block explorer utama untuk BNB Smart Chain yang menampilkan transaksi, token, dan aktivitas kontrak."
+  },
+  {
+    "id": "arbiscan",
+    "name": "Arbiscan",
+    "category": "Block Explorers",
+    "url": "https://arbiscan.io",
+    "pricing": "Free",
+    "description": "The official block explorer for Arbitrum, tracking transactions, contracts, and network activity.",
+    "descriptionId": "Block explorer resmi untuk Arbitrum yang melacak transaksi, kontrak, dan aktivitas jaringan."
+  },
+  {
+    "id": "basescan",
+    "name": "Basescan",
+    "category": "Block Explorers",
+    "url": "https://basescan.org",
+    "pricing": "Free",
+    "description": "The official block explorer for Base, Coinbase's Ethereum layer-2 network.",
+    "descriptionId": "Block explorer resmi untuk Base, jaringan layer-2 Ethereum milik Coinbase."
+  },
+  {
+    "id": "solscan",
+    "name": "Solscan",
+    "category": "Block Explorers",
+    "url": "https://solscan.io",
+    "pricing": "Free",
+    "description": "A leading Solana block explorer for tracking transactions, tokens, programs, and wallet activity.",
+    "descriptionId": "Block explorer Solana terkemuka untuk melacak transaksi, token, program, dan aktivitas wallet."
+  },
+  {
+    "id": "mempool-space",
+    "name": "Mempool.space",
+    "category": "Block Explorers",
+    "url": "https://mempool.space",
+    "pricing": "Free",
+    "description": "Open-source Bitcoin block explorer and mempool visualizer showing fees, blocks, and transaction status in real time.",
+    "descriptionId": "Block explorer Bitcoin open-source dan visualisasi mempool yang menampilkan fee, blok, dan status transaksi secara real time."
+  },
+  {
+    "id": "blockchair",
+    "name": "Blockchair",
+    "category": "Block Explorers",
+    "url": "https://blockchair.com",
+    "pricing": "Freemium",
+    "description": "Multi-blockchain explorer and search engine supporting Bitcoin, Ethereum, and many other networks with advanced search.",
+    "descriptionId": "Explorer dan mesin pencari multi-blockchain yang mendukung Bitcoin, Ethereum, dan banyak jaringan lain dengan pencarian lanjutan."
+  },
+  {
+    "id": "tronscan",
+    "name": "Tronscan",
+    "category": "Block Explorers",
+    "url": "https://tronscan.org",
+    "pricing": "Free",
+    "description": "The official block explorer for the TRON network, tracking transactions, accounts, and smart contracts.",
+    "descriptionId": "Block explorer resmi untuk jaringan TRON yang melacak transaksi, akun, dan smart contract."
+  },
+  {
+    "id": "blockscout",
+    "name": "Blockscout",
+    "category": "Block Explorers",
+    "url": "https://www.blockscout.com",
+    "pricing": "Free",
+    "description": "Open-source block explorer used across many EVM chains, offering contract verification and transaction tracing.",
+    "descriptionId": "Block explorer open-source yang dipakai di banyak chain EVM, dengan verifikasi kontrak dan pelacakan transaksi."
+  },
+  {
+    "id": "forta",
+    "name": "Forta",
+    "category": "Security & Threat Detection",
+    "url": "https://forta.org",
+    "pricing": "Freemium",
+    "description": "Real-time threat detection network that monitors on-chain activity for exploits, scams, and anomalies.",
+    "descriptionId": "Jaringan deteksi ancaman real-time yang memantau aktivitas on-chain untuk exploit, penipuan, dan anomali."
+  },
+  {
+    "id": "hypernative",
+    "name": "Hypernative",
+    "category": "Security & Threat Detection",
+    "url": "https://www.hypernative.io",
+    "pricing": "Enterprise",
+    "description": "Proactive Web3 security platform detecting and preventing exploits, hacks, and malicious transactions before they cause damage.",
+    "descriptionId": "Platform keamanan Web3 proaktif yang mendeteksi dan mencegah exploit, peretasan, serta transaksi berbahaya sebelum merugikan."
+  },
+  {
+    "id": "certik-skynet",
+    "name": "CertiK Skynet",
+    "category": "Security & Threat Detection",
+    "url": "https://skynet.certik.com",
+    "pricing": "Freemium",
+    "description": "Security monitoring dashboard from CertiK tracking audits, on-chain risk scores, and exploit alerts for crypto projects.",
+    "descriptionId": "Dasbor pemantauan keamanan dari CertiK yang melacak audit, skor risiko on-chain, dan alert exploit untuk proyek kripto."
+  },
+  {
+    "id": "hexagate",
+    "name": "Hexagate (Chainalysis)",
+    "category": "Security & Threat Detection",
+    "url": "https://www.hexagate.com",
+    "pricing": "Enterprise",
+    "description": "Real-time Web3 threat prevention platform, now part of Chainalysis, that detects and blocks on-chain attacks.",
+    "descriptionId": "Platform pencegahan ancaman Web3 real-time, kini bagian dari Chainalysis, yang mendeteksi dan memblokir serangan on-chain."
+  },
+  {
+    "id": "blockaid",
+    "name": "Blockaid",
+    "category": "Security & Threat Detection",
+    "url": "https://www.blockaid.io",
+    "pricing": "Enterprise",
+    "description": "Onchain security infrastructure that simulates and blocks malicious transactions across wallets and dapps in real time.",
+    "descriptionId": "Infrastruktur keamanan onchain yang mensimulasikan dan memblokir transaksi berbahaya pada wallet serta dapp secara real time."
+  },
+  {
+    "id": "cyvers",
+    "name": "Cyvers",
+    "category": "Security & Threat Detection",
+    "url": "https://www.cyvers.ai",
+    "pricing": "Enterprise",
+    "description": "AI-powered threat detection platform that monitors on-chain activity to prevent hacks and fraud in real time.",
+    "descriptionId": "Platform deteksi ancaman bertenaga AI yang memantau aktivitas on-chain untuk mencegah peretasan dan fraud secara real time."
+  }
+]
