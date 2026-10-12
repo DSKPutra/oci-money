@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { PageHeader } from '../components/PageHeader'
 import { LoadingBox, ErrorBox, EmptyBox } from '../components/StatusBox'
 import { useAsync } from '../hooks/useAsync'
@@ -14,6 +15,7 @@ import {
 } from '../lib/api/blockscout'
 import { getBtcAddress, getBtcAddressTxs, isBtcAddress, type MempoolAddressInfo } from '../lib/api/mempool'
 import { getSolBalance, getSolTokenAccounts, isSolanaAddress, type SolTokenAccount } from '../lib/api/solana'
+import { detectChain } from '../utils/address'
 import { formatNumber, formatTokenValue, formatUsd, timeAgo, truncateAddress } from '../utils/format'
 
 type ChainOption =
@@ -51,57 +53,74 @@ interface SolResult {
 type ExplorerResult = EvmResult | BtcResult | SolResult
 
 export function ExplorerPage() {
+  const [searchParams] = useSearchParams()
+  const initialQuery = searchParams.get('q') ?? ''
   const [chain, setChain] = useState<ChainOption>(CHAIN_OPTIONS[0])
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState(initialQuery)
   const [validationError, setValidationError] = useState<string | null>(null)
   const { data, loading, error, run } = useAsync<ExplorerResult>()
 
+  const runSearch = useCallback(
+    (opt: ChainOption, rawAddress: string) => {
+      const address = rawAddress.trim()
+      setValidationError(null)
+
+      if (opt.kind === 'evm') {
+        if (!isEvmAddress(address)) {
+          setValidationError('Enter a valid EVM address (0x…40 hex chars).')
+          return
+        }
+        const chainConfig = EVM_CHAINS.find((c) => c.id === opt.id)!
+        run(
+          Promise.all([
+            getAddress(chainConfig, address),
+            getAddressTokens(chainConfig, address).catch(() => []),
+            getAddressTransactions(chainConfig, address).catch(() => ({ items: [] })),
+          ]).then(([addr, tokens, txs]) => ({
+            kind: 'evm' as const,
+            address: addr,
+            tokens,
+            txs: txs.items,
+            chainLabel: chainConfig.label,
+            nativeSymbol: chainConfig.nativeSymbol,
+          })),
+        )
+      } else if (opt.kind === 'btc') {
+        if (!isBtcAddress(address)) {
+          setValidationError('Enter a valid Bitcoin address.')
+          return
+        }
+        run(
+          Promise.all([getBtcAddress(address), getBtcAddressTxs(address).catch(() => [])]).then(
+            ([info, txs]) => ({ kind: 'btc' as const, info, txs }),
+          ),
+        )
+      } else {
+        if (!isSolanaAddress(address)) {
+          setValidationError('Enter a valid Solana address.')
+          return
+        }
+        run(
+          Promise.all([getSolBalance(address), getSolTokenAccounts(address).catch(() => [])]).then(
+            ([balance, tokens]) => ({ kind: 'sol' as const, balance, tokens }),
+          ),
+        )
+      }
+    },
+    [run],
+  )
+
+  useEffect(() => {
+    if (!initialQuery) return
+    const detected = detectChain(initialQuery)
+    const opt = detected === 'btc' ? CHAIN_OPTIONS[3] : detected === 'sol' ? CHAIN_OPTIONS[4] : CHAIN_OPTIONS[0]
+    setChain(opt)
+    runSearch(opt, initialQuery)
+  }, [initialQuery, runSearch])
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
-    const address = input.trim()
-    setValidationError(null)
-
-    if (chain.kind === 'evm') {
-      if (!isEvmAddress(address)) {
-        setValidationError('Enter a valid EVM address (0x…40 hex chars).')
-        return
-      }
-      const chainConfig = EVM_CHAINS.find((c) => c.id === chain.id)!
-      run(
-        Promise.all([
-          getAddress(chainConfig, address),
-          getAddressTokens(chainConfig, address).catch(() => []),
-          getAddressTransactions(chainConfig, address).catch(() => ({ items: [] })),
-        ]).then(([addr, tokens, txs]) => ({
-          kind: 'evm' as const,
-          address: addr,
-          tokens,
-          txs: txs.items,
-          chainLabel: chainConfig.label,
-          nativeSymbol: chainConfig.nativeSymbol,
-        })),
-      )
-    } else if (chain.kind === 'btc') {
-      if (!isBtcAddress(address)) {
-        setValidationError('Enter a valid Bitcoin address.')
-        return
-      }
-      run(
-        Promise.all([getBtcAddress(address), getBtcAddressTxs(address).catch(() => [])]).then(
-          ([info, txs]) => ({ kind: 'btc' as const, info, txs }),
-        ),
-      )
-    } else {
-      if (!isSolanaAddress(address)) {
-        setValidationError('Enter a valid Solana address.')
-        return
-      }
-      run(
-        Promise.all([getSolBalance(address), getSolTokenAccounts(address).catch(() => [])]).then(
-          ([balance, tokens]) => ({ kind: 'sol' as const, balance, tokens }),
-        ),
-      )
-    }
+    runSearch(chain, input)
   }
 
   return (

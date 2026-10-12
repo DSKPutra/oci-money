@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom'
 
 const TABS = [
-  { to: '/', label: 'Directory', end: true },
+  { to: '/', label: 'Dashboard', end: true },
   { to: '/explorer', label: 'Explorer', end: false },
   { to: '/analytics', label: 'Analytics', end: false },
   { to: '/smart-money', label: 'Smart Money', end: false },
   { to: '/security', label: 'Security', end: false },
+  { to: '/directory', label: 'Directory', end: false },
 ]
 
 export function NavTabs() {

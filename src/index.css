@@ -15,6 +15,17 @@
   ::selection {
     @apply bg-neon/30;
   }
+  header {
+    padding-top: env(safe-area-inset-top);
+  }
+  footer {
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  }
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @layer utilities {

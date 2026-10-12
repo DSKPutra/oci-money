@@ -3,6 +3,7 @@ import { Header } from './components/Header'
 import { NavTabs } from './components/NavTabs'
 import { Footer } from './components/Footer'
 import { ErrorBoundary } from './components/ErrorBoundary'
+import { DashboardPage } from './pages/DashboardPage'
 import { DirectoryPage } from './pages/DirectoryPage'
 import { ExplorerPage } from './pages/ExplorerPage'
 import { AnalyticsPage } from './pages/AnalyticsPage'
@@ -14,7 +15,8 @@ function AppRoutes() {
   return (
     <ErrorBoundary key={location.pathname}>
       <Routes>
-        <Route path="/" element={<DirectoryPage />} />
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/directory" element={<DirectoryPage />} />
         <Route path="/explorer" element={<ExplorerPage />} />
         <Route path="/analytics" element={<AnalyticsPage />} />
         <Route path="/smart-money" element={<SmartMoneyPage />} />

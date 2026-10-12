@@ -7,9 +7,8 @@ no backend, no API keys. Live at **[oci.money](https://oci.money)**.
 
 ## Pages
 
-- **Directory** — searchable, filterable directory of on-chain intelligence platforms (forensics,
-  smart money, market analytics, data & query, protocol fundamentals, DEX/trading tools, block
-  explorers, security)
+- **Dashboard** (home) — live DeFi TVL, BTC/ETH/SOL prices, top assets and protocols, trending
+  pools, BTC whale watch, plus a global address search that auto-detects the chain
 - **Explorer** — wallet/contract lookup across Ethereum, Base, Polygon, Bitcoin, and Solana:
   balances, token holdings, and recent transactions
 - **Analytics** — top protocols and chains by TVL (DefiLlama), top assets by market cap
@@ -19,10 +18,25 @@ no backend, no API keys. Live at **[oci.money](https://oci.money)**.
 - **Security** — screens an EVM address for scam flags/tags and basic risk heuristics using live
   block explorer data (not a substitute for enterprise tools like Chainalysis/TRM/Elliptic — see
   the Directory for those)
+- **Directory** (rightmost tab) — searchable reference directory of on-chain intelligence
+  platforms (forensics, smart money, market analytics, data & query, protocol fundamentals,
+  DEX/trading tools, block explorers, security)
 
 > **Scope note:** the functional tools are intentionally lightweight, client-side integrations
 > against free/no-key public APIs. They are not a replacement for enterprise-grade platforms like
 > Nansen, Chainalysis, or Glassnode — for those, see the Directory tab.
+
+## Install on your phone (PWA)
+
+OCI.money is an installable Progressive Web App with an offline-capable app shell (live data still
+needs a connection).
+
+- **Android (Chrome):** tap **Install app** in the header, or menu → *Install app*
+- **iOS (Safari):** tap Share → **Add to Home Screen**
+- **Desktop (Chrome/Edge):** click the install icon in the address bar
+
+Publishing to the App Store / Google Play would require wrapping the web app (e.g. Capacitor or a
+Trusted Web Activity) and a developer account; the PWA works without either.
 
 ## Directory features
 
@@ -104,6 +118,11 @@ src/
 | Netlify mirror | https://oci-money.netlify.app |
 | Cloudflare Pages mirror | https://oci-money.pages.dev |
 | Source | https://github.com/DSKPutra/oci-money |
+
+## Credits & copyright
+
+Designed and built by **Dea Saka Kurnia Putra**.
+© 2026 Dea Saka Kurnia Putra. All rights reserved — see [LICENSE](LICENSE).
 
 ## Disclaimer
 

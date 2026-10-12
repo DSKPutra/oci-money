@@ -28,6 +28,10 @@ export function getProtocols() {
   return fetchJson<LlamaProtocol[]>(`${BASE_URL}/protocols`)
 }
 
+export function getHistoricalTvl() {
+  return fetchJson<{ date: number; tvl: number }[]>(`${BASE_URL}/v2/historicalChainTvl`)
+}
+
 export function getChains() {
   return fetchJson<LlamaChain[]>(`${BASE_URL}/v2/chains`)
 }

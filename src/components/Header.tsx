@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
 import { useI18n } from '../i18n'
 import { useTheme } from '../hooks/useTheme'
 import { Logo } from './Logo'
+import { InstallButton } from './InstallButton'
 
 export function Header() {
   const { lang, setLang, t } = useI18n()
@@ -9,10 +11,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-light-bg/80 backdrop-blur dark:border-border dark:bg-bg/80">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-        <a href="/" className="flex items-center gap-2" aria-label="OCI.money home">
+        <Link to="/" className="flex items-center gap-2" aria-label="OCI.money home">
           <Logo className="h-7 w-auto" />
-        </a>
+        </Link>
         <div className="flex items-center gap-2">
+          <InstallButton />
           <button
             type="button"
             onClick={() => setLang(lang === 'en' ? 'id' : 'en')}
