@@ -1,24 +1,24 @@
 import { useEffect, useState } from 'react'
+import { useI18n } from '../i18n'
 import { PageHeader } from '../components/PageHeader'
 import { LoadingBox, ErrorBox, EmptyBox } from '../components/StatusBox'
 import { useAsync } from '../hooks/useAsync'
-import { getRecentMempoolTxs, type MempoolTx } from '../lib/api/mempool'
 import {
   EVM_CHAINS,
   getTokenHolders,
+  getTokenTransfers,
+  WHALE_TOKENS,
   getTokenInfo,
   isEvmAddress,
   type BlockscoutTokenHolder,
 } from '../lib/api/blockscout'
-import { formatNumber, formatTokenValue, truncateAddress } from '../utils/format'
+import { formatNumber, formatTokenValue, formatUsd, timeAgo, truncateAddress } from '../utils/format'
 
 export function SmartMoneyPage() {
+  const { t } = useI18n()
   return (
     <div>
-      <PageHeader
-        title="Smart Money"
-        description="A lightweight whale-watch: the largest pending Bitcoin transfers right now, and top holder concentration for any ERC-20 token. For deep wallet labeling and entity attribution, see Nansen or Arkham in the Directory."
-      />
+      <PageHeader title={t('smartMoneyTitle')} description={t('smartMoneyDesc')} />
       <div className="mx-auto max-w-7xl space-y-10 px-4 py-8 sm:px-6">
         <WhaleWatch />
         <TokenHolders />
@@ -27,48 +27,75 @@ export function SmartMoneyPage() {
   )
 }
 
+interface LargeTransfer {
+  hash: string
+  symbol: string
+  usd: number
+  from: string
+  to: string
+  timestamp: string | null
+}
+
+const MIN_WHALE_USD = 250_000
+
+async function loadLargeTransfers(): Promise<LargeTransfer[]> {
+  const chain = EVM_CHAINS[0]
+  const results = await Promise.all(
+    WHALE_TOKENS.map((t) => getTokenTransfers(chain, t).then((r) => r.items).catch(() => [])),
+  )
+  return results
+    .flat()
+    .map((i) => ({
+      hash: i.transaction_hash,
+      symbol: i.token.symbol ?? '?',
+      usd: (Number(i.total.value) / 10 ** Number(i.total.decimals ?? i.token.decimals ?? 18)) * Number(i.token.exchange_rate ?? 0),
+      from: i.from.ens_domain_name ?? i.from.name ?? truncateAddress(i.from.hash, 4),
+      to: i.to.ens_domain_name ?? i.to.name ?? truncateAddress(i.to.hash, 4),
+      timestamp: i.timestamp,
+    }))
+    .filter((t) => Number.isFinite(t.usd) && t.usd >= MIN_WHALE_USD)
+    .sort((a, b) => b.usd - a.usd)
+    .slice(0, 12)
+}
+
 function WhaleWatch() {
-  const { data, loading, error, run } = useAsync<MempoolTx[]>()
+  const { data, loading, error, run } = useAsync<LargeTransfer[]>()
 
   useEffect(() => {
-    run(getRecentMempoolTxs())
+    run(loadLargeTransfers())
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  const sorted = [...(data ?? [])].sort((a, b) => b.value - a.value).slice(0, 10)
 
   return (
     <section>
       <h2 className="mb-3 text-lg font-semibold text-slate-900 dark:text-white">
-        Bitcoin whale watch (mempool)
+        Large Ethereum transfers (≥ $250K)
       </h2>
       {loading && <LoadingBox />}
       {error && <ErrorBox message={error} />}
-      {!loading && !error && sorted.length === 0 && (
-        <EmptyBox message="No large pending transactions right now." />
+      {!loading && !error && data && data.length === 0 && (
+        <EmptyBox message="No transfers above $250K in the latest USDT/USDC/WETH/WBTC activity." />
       )}
-      {!loading && !error && sorted.length > 0 && (
+      {data && data.length > 0 && (
         <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-border">
-          <table className="w-full min-w-[480px] text-left text-sm">
+          <table className="w-full min-w-[560px] text-left text-sm">
             <thead>
               <tr className="border-b border-slate-200 bg-slate-50 font-mono text-xs uppercase text-slate-500 dark:border-border dark:bg-panel dark:text-slate-400">
-                <th className="px-4 py-2">Txid</th>
-                <th className="px-4 py-2">Value (BTC)</th>
-                <th className="px-4 py-2">Fee (sats)</th>
+                <th className="px-4 py-2">Token</th>
+                <th className="px-4 py-2">Value</th>
+                <th className="px-4 py-2">From</th>
+                <th className="px-4 py-2">To</th>
+                <th className="px-4 py-2">Age</th>
               </tr>
             </thead>
             <tbody>
-              {sorted.map((tx) => (
-                <tr key={tx.txid} className="border-b border-slate-100 bg-white dark:border-border/50 dark:bg-panel">
-                  <td className="px-4 py-2 font-mono text-xs text-slate-600 dark:text-slate-400">
-                    {truncateAddress(tx.txid, 6)}
-                  </td>
-                  <td className="px-4 py-2 font-mono text-neon">
-                    {formatNumber(tx.value / 100_000_000)}
-                  </td>
-                  <td className="px-4 py-2 font-mono text-slate-600 dark:text-slate-400">
-                    {formatNumber(tx.fee)}
-                  </td>
+              {data.map((tx, i) => (
+                <tr key={`${tx.hash}-${i}`} className="border-b border-slate-100 bg-white dark:border-border/50 dark:bg-panel">
+                  <td className="px-4 py-2 font-medium text-slate-900 dark:text-white">{tx.symbol}</td>
+                  <td className="px-4 py-2 font-mono text-neon">{formatUsd(tx.usd, { compact: true })}</td>
+                  <td className="px-4 py-2 font-mono text-xs text-slate-600 dark:text-slate-400">{tx.from}</td>
+                  <td className="px-4 py-2 font-mono text-xs text-slate-600 dark:text-slate-400">{tx.to}</td>
+                  <td className="px-4 py-2 font-mono text-xs text-slate-500">{timeAgo(tx.timestamp)}</td>
                 </tr>
               ))}
             </tbody>
@@ -76,7 +103,7 @@ function WhaleWatch() {
         </div>
       )}
       <p className="mt-2 font-mono text-[11px] text-slate-400">
-        Unconfirmed transactions currently in the mempool, sorted by value. Data via mempool.space.
+        Latest transfers of USDT, USDC, WETH and WBTC on Ethereum mainnet, filtered to ≥ $250K. Data via Blockscout.
       </p>
     </section>
   )

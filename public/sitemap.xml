@@ -6,7 +6,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://oci.money/directory</loc>
+    <loc>https://oci.money/portfolio</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21,12 +21,27 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://oci.money/yields</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://oci.money/smart-money</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://oci.money/security</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oci.money/tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oci.money/directory</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

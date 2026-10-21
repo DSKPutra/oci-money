@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { useI18n } from '../i18n'
 import { PageHeader } from '../components/PageHeader'
 import { LoadingBox, ErrorBox, EmptyBox } from '../components/StatusBox'
 import { useAsync } from '../hooks/useAsync'
@@ -53,6 +54,7 @@ interface SolResult {
 type ExplorerResult = EvmResult | BtcResult | SolResult
 
 export function ExplorerPage() {
+  const { t } = useI18n()
   const [searchParams] = useSearchParams()
   const initialQuery = searchParams.get('q') ?? ''
   const [chain, setChain] = useState<ChainOption>(CHAIN_OPTIONS[0])
@@ -125,10 +127,7 @@ export function ExplorerPage() {
 
   return (
     <div>
-      <PageHeader
-        title="Explorer"
-        description="Look up any wallet address or contract across Ethereum, Base, Polygon, Bitcoin, and Solana — balances, token holdings, and recent activity, powered by public block explorer APIs."
-      />
+      <PageHeader title={t('explorerTitle')} description={t('explorerDesc')} />
 
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         <form onSubmit={handleSearch} className="space-y-3">

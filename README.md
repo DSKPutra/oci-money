@@ -7,24 +7,28 @@ no backend, no API keys. Live at **[oci.money](https://oci.money)**.
 
 ## Pages
 
-- **Dashboard** (home) — live DeFi TVL, BTC/ETH/SOL prices, top assets and protocols, trending
-  pools, BTC whale watch, plus a global address search that auto-detects the chain
-- **Explorer** — wallet/contract lookup across Ethereum, Base, Polygon, Bitcoin, and Solana:
-  balances, token holdings, and recent transactions
-- **Analytics** — top protocols and chains by TVL (DefiLlama), top assets by market cap
-  (CoinGecko), and trending DEX pools (GeckoTerminal)
-- **Smart Money** — a lightweight whale-watch: largest pending Bitcoin transfers, and top holder
-  concentration for any ERC-20 token
-- **Security** — screens an EVM address for scam flags/tags and basic risk heuristics using live
-  block explorer data (not a substitute for enterprise tools like Chainalysis/TRM/Elliptic — see
-  the Directory for those)
-- **Directory** (rightmost tab) — searchable reference directory of on-chain intelligence
-  platforms (forensics, smart money, market analytics, data & query, protocol fundamentals,
-  DEX/trading tools, block explorers, security)
+Built for crypto investors, powered entirely by free public APIs (Blockscout, mempool.space, Solana
+public RPC, DefiLlama, CoinGecko, GeckoTerminal, alternative.me) — no backend, no API keys.
 
-> **Scope note:** the functional tools are intentionally lightweight, client-side integrations
-> against free/no-key public APIs. They are not a replacement for enterprise-grade platforms like
-> Nansen, Chainalysis, or Glassnode — for those, see the Directory tab.
+- **Dashboard** (home) — market mood (Fear & Greed, BTC dominance, total market cap, ETH gas), DeFi
+  TVL chart, BTC/ETH/SOL prices, top assets and protocols, trending coins and pools, your portfolio
+  summary, triggered price alerts, and a global address search that auto-detects the chain
+- **Portfolio** — track the net worth of your wallets (Ethereum, Base, Polygon, Bitcoin, Solana)
+  with allocation, a coin watchlist, and price alerts with browser notifications. Everything is
+  stored locally in your browser — public addresses only, no keys, no sign-in
+- **Explorer** — wallet/contract lookup: balances, token holdings, recent transactions
+- **Analytics** — TVL leaderboards, chain comparison, top assets by market cap, trending DEX pools
+- **Yields** — DeFi yield finder (DefiLlama) with stablecoin / TVL / chain filters and a risk read-out
+- **Smart Money** — large (≥ $250K) USDT/USDC/WETH/WBTC transfers on Ethereum, plus top-holder
+  concentration for any ERC-20 token
+- **Security** — address scam-flag screening and a **token risk check** (holder concentration, DEX
+  liquidity, contract verification, scam flags) to run before you buy
+- **Tools** — DCA, profit/loss, position-size & risk, and impermanent-loss calculators
+- **Directory** (rightmost tab) — searchable reference directory of on-chain intelligence platforms
+
+> **Scope note:** these tools are lightweight, client-side integrations against free/no-key public
+> APIs. They are not a replacement for enterprise platforms like Nansen, Chainalysis, or Glassnode —
+> see the Directory. Data may be delayed or incomplete. **Not financial advice.**
 
 ## Install on your phone (PWA)
 
@@ -47,7 +51,7 @@ Trusted Web Activity) and a developer account; the PWA works without either.
 - Add, edit, and delete custom platforms via a validated modal form (stored in `localStorage`)
 - Export the full directory to JSON or CSV; import platforms from a JSON file
 - Dark mode by default, with a light mode toggle (respects system preference on first visit)
-- English/Indonesian language toggle (Directory only — the tool pages are English-only for now)
+- English/Indonesian language toggle (navigation, page headers, dashboard and portfolio; some table labels stay in English)
 - Fully responsive, keyboard-accessible, and ARIA-labeled
 - No backend — built-in data ships in `src/data/platforms.json`, user data lives in `localStorage`
 

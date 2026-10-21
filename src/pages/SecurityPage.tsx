@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useI18n } from '../i18n'
 import { PageHeader } from '../components/PageHeader'
 import { LoadingBox, ErrorBox, EmptyBox } from '../components/StatusBox'
 import { useAsync } from '../hooks/useAsync'
@@ -11,6 +12,7 @@ import {
   type BlockscoutTransaction,
 } from '../lib/api/blockscout'
 import { timeAgo, truncateAddress } from '../utils/format'
+import { TokenRiskCheck } from '../components/TokenRiskCheck'
 
 type RiskLevel = 'high' | 'medium' | 'low' | 'unknown'
 
@@ -65,6 +67,7 @@ function assessRisk(address: BlockscoutAddress, txs: BlockscoutTransaction[]): {
 }
 
 export function SecurityPage() {
+  const { t } = useI18n()
   const [chainId, setChainId] = useState(EVM_CHAINS[0].id)
   const [input, setInput] = useState('')
   const [validationError, setValidationError] = useState<string | null>(null)
@@ -91,10 +94,7 @@ export function SecurityPage() {
 
   return (
     <div>
-      <PageHeader
-        title="Security"
-        description="Screen an address for known scam flags, tags, and basic risk heuristics using live block explorer data. This is not a substitute for enterprise-grade compliance tools like Chainalysis, TRM Labs, or Elliptic — see the Directory for those."
-      />
+      <PageHeader title={t('securityTitle')} description={t('securityDesc')} />
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         <form onSubmit={handleSubmit} className="space-y-3">
           <div className="flex flex-wrap gap-2">
@@ -183,6 +183,7 @@ export function SecurityPage() {
             </div>
           )}
         </div>
+        <TokenRiskCheck />
       </div>
     </div>
   )

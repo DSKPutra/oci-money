@@ -1,15 +1,21 @@
 import { NavLink } from 'react-router-dom'
+import { useI18n } from '../i18n'
+import type { TranslationKey } from '../i18n/translations'
 
-const TABS = [
-  { to: '/', label: 'Dashboard', end: true },
-  { to: '/explorer', label: 'Explorer', end: false },
-  { to: '/analytics', label: 'Analytics', end: false },
-  { to: '/smart-money', label: 'Smart Money', end: false },
-  { to: '/security', label: 'Security', end: false },
-  { to: '/directory', label: 'Directory', end: false },
+const TABS: { to: string; key: TranslationKey; end: boolean }[] = [
+  { to: '/', key: 'navDashboard', end: true },
+  { to: '/portfolio', key: 'navPortfolio', end: false },
+  { to: '/explorer', key: 'navExplorer', end: false },
+  { to: '/analytics', key: 'navAnalytics', end: false },
+  { to: '/yields', key: 'navYields', end: false },
+  { to: '/smart-money', key: 'navSmartMoney', end: false },
+  { to: '/security', key: 'navSecurity', end: false },
+  { to: '/tools', key: 'navTools', end: false },
+  { to: '/directory', key: 'navDirectory', end: false },
 ]
 
 export function NavTabs() {
+  const { t } = useI18n()
   return (
     <nav
       aria-label="Main"
@@ -29,7 +35,7 @@ export function NavTabs() {
               }`
             }
           >
-            {tab.label}
+            {t(tab.key)}
           </NavLink>
         ))}
       </div>

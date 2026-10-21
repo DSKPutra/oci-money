@@ -53,6 +53,7 @@ export interface BlockscoutTokenBalance {
     exchange_rate: string | null
     icon_url: string | null
     type: string
+    reputation?: string | null
   }
   value: string
 }
@@ -115,3 +116,25 @@ export function getTokenInfo(chain: EvmChain, tokenAddress: string) {
 export function isEvmAddress(value: string) {
   return /^0x[a-fA-F0-9]{40}$/.test(value.trim())
 }
+
+export interface BlockscoutTransfer {
+  transaction_hash: string
+  timestamp: string | null
+  from: { hash: string; ens_domain_name?: string | null; name?: string | null }
+  to: { hash: string; ens_domain_name?: string | null; name?: string | null }
+  total: { value: string; decimals: string | null }
+  token: { symbol: string | null; exchange_rate: string | null; decimals: string | null }
+}
+
+export function getTokenTransfers(chain: EvmChain, tokenAddress: string) {
+  return fetchJson<{ items: BlockscoutTransfer[] }>(
+    `${chain.baseUrl}/api/v2/tokens/${tokenAddress}/transfers`,
+  )
+}
+
+export const WHALE_TOKENS = [
+  '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+  '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+  '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+  '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',
+]

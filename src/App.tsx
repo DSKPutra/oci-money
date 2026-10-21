@@ -9,6 +9,9 @@ import { ExplorerPage } from './pages/ExplorerPage'
 import { AnalyticsPage } from './pages/AnalyticsPage'
 import { SmartMoneyPage } from './pages/SmartMoneyPage'
 import { SecurityPage } from './pages/SecurityPage'
+import { PortfolioPage } from './pages/PortfolioPage'
+import { YieldsPage } from './pages/YieldsPage'
+import { ToolsPage } from './pages/ToolsPage'
 
 function AppRoutes() {
   const location = useLocation()
@@ -21,6 +24,9 @@ function AppRoutes() {
         <Route path="/analytics" element={<AnalyticsPage />} />
         <Route path="/smart-money" element={<SmartMoneyPage />} />
         <Route path="/security" element={<SecurityPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/yields" element={<YieldsPage />} />
+        <Route path="/tools" element={<ToolsPage />} />
       </Routes>
     </ErrorBoundary>
   )

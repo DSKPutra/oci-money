@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useI18n } from '../i18n'
 import { PageHeader } from '../components/PageHeader'
 import { LoadingBox, ErrorBox, EmptyBox } from '../components/StatusBox'
 import { useAsync } from '../hooks/useAsync'
@@ -8,12 +9,10 @@ import { getTrendingPools, GT_NETWORKS, type GtPool } from '../lib/api/geckoterm
 import { formatPercent, formatUsd } from '../utils/format'
 
 export function AnalyticsPage() {
+  const { t } = useI18n()
   return (
     <div>
-      <PageHeader
-        title="Analytics"
-        description="Market and protocol fundamentals — TVL leaderboards, chain comparisons, top assets by market cap, and trending DEX pools. Data from DefiLlama, CoinGecko, and GeckoTerminal public APIs."
-      />
+      <PageHeader title={t('analyticsTitle')} description={t('analyticsDesc')} />
       <div className="mx-auto max-w-7xl space-y-10 px-4 py-8 sm:px-6">
         <TopProtocols />
         <TopChains />
